@@ -1,0 +1,39 @@
+def verificar_maioridade(idade):
+    if idade >= 18:
+        return "Você é maior de idade."
+    else:
+        return "Você é menor de idade."
+
+def classificar_faixa_etaria(idade):
+    if idade < 18:
+        return "Menor de idade"
+    elif 13 <= idade <= 17:
+        return "Adolescente"
+    elif 18 <= idade <= 64:
+        return "Adulto"
+    else:
+        return "Idoso"
+
+def menu():
+    while True:
+        print("\nMenu:")
+        print("1 - Verificar maioridade")
+        print("2 - Classificar faixa etária")
+        print("3 - Sair")
+        
+        opcao = input("Escolha uma opção (1/2/3): ")
+        
+        if opcao == '1':
+            idade = int(input("Digite sua idade: "))
+            print(verificar_maioridade(idade))
+        elif opcao == '2':
+            idade = int(input("Digite sua idade: "))
+            print(classificar_faixa_etaria(idade))
+        elif opcao == '3':
+            print("Saindo...")
+            break
+        else:
+            print("Opção inválida! Tente novamente.")
+
+# Chamada para o menu
+menu()
